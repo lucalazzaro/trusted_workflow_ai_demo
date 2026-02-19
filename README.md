@@ -1,34 +1,69 @@
 # Trusted Workflow AI Demo
 
-An interactive, minimal Next.js demo showing how to integrate AI into enterprise workflows **with control**:
-**intake quality checks → policy routing → bounded AI suggestions → mandatory human decision → audit log**.
+Interactive Next.js demo showing how AI can support **enterprise decision workflows**  
+without removing **human control**.
+
+## What this demonstrates
+
+A governed decision flow:
+
+**Intake → Quality gate → Policy routing → Bounded AI suggestion → Human decision → Audit log**
 
 This is **decision support**, not decision automation.
 
-## What you’ll see (6 steps)
+## Why it matters
 
-1. **Request intake** – capture the essentials (type, impact, reason, evidence)
-2. **Intake quality gate** – catch missing or inconsistent data early
-3. **Policy & routing** – route the case (standard / request info / escalate)
-4. **AI suggestion (bounded)** – AI suggests and explains (can be withheld)
-5. **Human decision** – a person decides and records a reason
-6. **Audit log** – timestamped history of system + human actions
+Enterprise AI adoption depends on:
 
-## Why this matters (enterprise)
+- **Trust** → bad input stopped early  
+- **Governance** → consistent routing rules  
+- **Human-in-the-loop** → AI cannot finalize outcomes  
+- **Auditability** → full trace of actions and decisions  
 
-- **Trust**: bad input is stopped before it reaches approvals
-- **Governance**: routing rules enforce consistent behavior
-- **Human-in-the-loop**: AI cannot finalize outcomes
-- **Auditability**: every action is recorded (who/when/what)
+## Demo preview
 
-## Demo controls
+![Trusted Workflow AI demo](public/demo.gif)
 
-- **Messy intake** toggle: simulates missing evidence to show how gates and routing react
-- **Next**: progresses the workflow and writes meaningful audit events
-- **Export audit log**: downloads the audit timeline as JSON
+## Key concepts
+
+- **Intake quality gate**  
+  Prevents incomplete or inconsistent data from reaching approvals.
+
+- **Policy & routing**  
+  Deterministic rules choose the safest workflow path.
+
+- **Bounded AI suggestion**  
+  AI provides explainable support and can be **withheld** when input is unsafe.
+
+- **Mandatory human decision**  
+  A person must approve, reject, request info, or escalate.
+
+- **Audit log**  
+  Timestamped history of system and human actions.
 
 ## Run locally
 
 ```bash
 npm install
 npm run dev
+
+Open:
+
+Landing → http://localhost:3000
+Interactive demo → http://localhost:3000/demo
+
+Tech focus
+
+Minimal, intentional stack:
+
+Next.js (App Router)
+TypeScript
+API route workflow engine
+Append-only audit log
+
+The goal is to showcase AI workflow architecture, not model complexity.
+
+Author
+
+Luca Lazzaro
+AI workflow design · Decision support · Human-in-the-loop systems
