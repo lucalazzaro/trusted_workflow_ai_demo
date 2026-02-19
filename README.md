@@ -1,73 +1,114 @@
 # Trusted Workflow AI Demo
 
-Interactive Next.js demo showing how AI can support **enterprise decision workflows**  
-without removing **human control**.
+Interactive **Next.js** demo showing how AI can support **enterprise
+decision workflows** without removing **human control**.
 
-## What this demonstrates
+------------------------------------------------------------------------
 
-A governed decision flow:
+## Overview
 
-**Intake → Quality gate → Policy routing → Bounded AI suggestion → Human decision → Audit log**
+This project demonstrates a governed decision flow:
 
-This is **decision support**, not decision automation.
+**Intake → Quality gate → Policy routing → Bounded AI suggestion → Human
+decision → Audit log**
 
-## Why it matters
+The focus is **decision support**, not decision automation.
+
+------------------------------------------------------------------------
+
+## Why this matters
 
 Enterprise AI adoption depends on:
 
-- **Trust** → bad input stopped early  
-- **Governance** → consistent routing rules  
-- **Human-in-the-loop** → AI cannot finalize outcomes  
-- **Auditability** → full trace of actions and decisions  
+-   **Trust** --- bad or incomplete input is stopped early\
+-   **Governance** --- deterministic routing rules ensure consistency\
+-   **Human‑in‑the‑loop** --- AI cannot finalize outcomes\
+-   **Auditability** --- every action is recorded with timestamps and
+    actors
+
+------------------------------------------------------------------------
 
 ## Demo preview
 
+> Add `public/demo.gif` here after recording the walkthrough.
+
 ![Trusted Workflow AI demo](public/demo.gif)
 
-## Key concepts
+------------------------------------------------------------------------
 
-- **Intake quality gate**  
-  Prevents incomplete or inconsistent data from reaching approvals.
+## Workflow in six steps
 
-- **Policy & routing**  
-  Deterministic rules choose the safest workflow path.
+1.  **Request intake** --- capture essentials (type, impact, reason,
+    evidence)\
+2.  **Intake quality gate** --- detect missing or inconsistent data\
+3.  **Policy & routing** --- choose safest path (standard, request info,
+    escalation)\
+4.  **AI suggestion (bounded)** --- explainable support that can be
+    withheld\
+5.  **Human decision** --- mandatory approval, rejection, escalation, or
+    info request\
+6.  **Audit log** --- full trace of system and human actions
 
-- **Bounded AI suggestion**  
-  AI provides explainable support and can be **withheld** when input is unsafe.
-
-- **Mandatory human decision**  
-  A person must approve, reject, request info, or escalate.
-
-- **Audit log**  
-  Timestamped history of system and human actions.
-
-## Run locally
-
-```bash
-npm install
-npm run dev
+------------------------------------------------------------------------
 
 ## Open
 
-**Landing** → http://localhost:3000  
-**Interactive demo** → http://localhost:3000/demo  
+👉 **Landing:** http://localhost:3000\
+👉 **Interactive demo:** http://localhost:3000/demo
 
----
+------------------------------------------------------------------------
 
 ## Tech focus
 
 **Minimal, intentional stack:**
 
-- **Next.js (App Router)**
-- **TypeScript**
-- **API route workflow engine**
-- **Append-only audit log**
+-   **Next.js (App Router)**
+-   **TypeScript**
+-   **API‑route workflow engine**
+-   **Append‑only audit log**
 
 **Goal:** showcase **AI workflow architecture**, not model complexity.
 
----
+------------------------------------------------------------------------
+
+## Project structure (high level)
+
+-   `app/` --- UI pages and API routes\
+-   `lib/contracts/` --- shared types between UI and API\
+-   `lib/engine/` --- workflow logic (checks, routing, AI suggestion)\
+-   `lib/audit/` --- append‑only audit storage (demo‑level)
+
+------------------------------------------------------------------------
+
+## Run locally
+
+``` bash
+npm install
+npm run dev
+```
+
+Open the browser:
+
+-   **Landing** → http://localhost:3000\
+-   **Demo** → http://localhost:3000/demo
+
+------------------------------------------------------------------------
+
+## Key concepts
+
+-   **Governed AI** --- AI operates inside explicit workflow controls\
+-   **Bounded suggestion** --- AI explains recommendations and limits\
+-   **Human authority** --- final decision always belongs to a person\
+-   **Traceability** --- audit trail supports compliance and review
+
+------------------------------------------------------------------------
 
 ## Author
 
-**Luca Lazzaro**  
-AI workflow design · Decision support · Human-in-the-loop systems
+**Luca Lazzaro**\
+AI workflow design · Decision support · Human‑in‑the‑loop systems
+
+------------------------------------------------------------------------
+
+## License
+MIT (or your preferred license)
