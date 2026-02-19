@@ -47,23 +47,27 @@ Enterprise AI adoption depends on:
 npm install
 npm run dev
 
-Open:
+## Open
 
-Landing → http://localhost:3000
-Interactive demo → http://localhost:3000/demo
+**Landing** → http://localhost:3000  
+**Interactive demo** → http://localhost:3000/demo  
 
-Tech focus
+---
 
-Minimal, intentional stack:
+## Tech focus
 
-Next.js (App Router)
-TypeScript
-API route workflow engine
-Append-only audit log
+**Minimal, intentional stack:**
 
-The goal is to showcase AI workflow architecture, not model complexity.
+- **Next.js (App Router)**
+- **TypeScript**
+- **API route workflow engine**
+- **Append-only audit log**
 
-Author
+**Goal:** showcase **AI workflow architecture**, not model complexity.
 
-Luca Lazzaro
+---
+
+## Author
+
+**Luca Lazzaro**  
 AI workflow design · Decision support · Human-in-the-loop systems
